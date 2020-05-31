@@ -1,0 +1,117 @@
+<!Doctype html>
+<html>
+
+    <head>
+        <title>Scientific Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" type="text/css" href="base.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        
+    </head>
+<style>
+.th {
+  position: absolute;
+transition: transform .2s; 
+  top: 200px;
+font-family:Segoe Print;
+  left: 20px;
+
+ color:black;
+ -ms-transform: rotate(278deg); /* IE 9 */
+  transform: rotate(342deg);
+  text-shadow: 1px 3px #8CF7F2;
+  font-size: 25px;
+   -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
+}
+.th:hover{
+
+transform: scale(1.1);
+ -ms-transform: rotate(278deg); /* IE 9 */
+  transform: rotate(350deg);
+font-size: 40px
+}
+
+.blink {
+      animation: blinker 0.6s linear infinite;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      font-family:cursive;
+      }
+      @keyframes blinker {  
+      50% { opacity: 0; }
+      }
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #F4F967, 0 0 20px #F4F967 , 0 0 30px #F4F967, 0 0 40px #F4F967, 0 0 50px red, 0 0 60px white, 0 0 70px 0C0A0A;
+  }
+  
+  to {
+    text-shadow: 0 0 20px red, 0 0 30px #ff4da6, 0 0 40px #EEE972, 0 0 50px red, 0 0 60px #EEE972, 0 0 70px red, 0 0 80px #F4F967;
+  }}
+</style>
+    <body style="background-image:linear-gradient(#faea05,#dbcd04)">
+
+            <div class="phone">
+            <div class="fcamera"></div>
+            <div class="clens"></div>
+            <div class="speaker"></div>
+            <div class="screen">
+            <div class="display">0</div>
+            <div class="expression"></div>
+            <div class="buttons clearfix">
+                <div class="clear reset" onclick ="clearScreen.call(this)">CE<div class="waveButton"></div></div>
+                <div class ="del reset" data-number="8" onclick="deleteANumber.call(this)">C<div class="waveButton"></div></div>
+                <div class="sign reset" onclick="alternateSign.call(this)">-M<div class="waveButton"></div></div>
+
+                <div class="sci-ops " onclick="sin.call(this)">sin<div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="cos.call(this)">cos<div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="tan.call(this)">tan<div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="exp.call(this)">exp<div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="log.call(this)">log<div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="log2.call(this)">log<sub>2</sub><div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="pow.call(this)">x<sup>2</sup><div class="waveButton"></div></div>
+                <div class="sci-ops " onclick="sqrt.call(this)">&#8730;x<div class="waveButton"></div></div>
+                
+                <div class="number " data-number="55">7<div class="waveButton"></div></div>
+                <div class="number " data-number="56">8<div class="waveButton"></div></div>
+                <div class="number " data-number="57">9<div class="waveButton"></div></div>
+                <div class="basic-ops " data-number="107">+<div class="waveButton"></div></div>
+
+                <div class="number " data-number="52">4<div class="waveButton"></div></div>
+                <div class="number " data-number="53">5<div class="waveButton"></div></div>
+                <div class="number " data-number="54">6<div class="waveButton"></div></div>
+                <div class="basic-ops " data-number="109">-<div class="waveButton"></div></div>
+
+                <div class="number " data-number="49">1<div class="waveButton"></div></div>
+                <div class="number " data-number="50">2<div class="waveButton"></div></div>
+                <div class="number  " data-number="51">3<div class="waveButton"></div></div>
+                <div class="basic-ops " data-number="106">*<div class="waveButton"></div></div>
+
+                <div class="number " data-number="48">0<div class="waveButton"></div></div>
+                <div class="number " data-number="110">.<div class="waveButton"></div></div>
+                <div class="equals " data-number="13" onclick="equals.call(this)">&#61;<div class="waveButton"></div></div>
+                <div class="basic-ops " data-number="111">/<div class="waveButton"></div></div>
+            </div>
+         </div>
+        <div class="lock_btn"></div>
+        <div class="volume_btn"></div>
+        <div class="task_bar"></div>
+
+        <script type="text/javascript" src="calculator.js"></script>
+
+    </div>
+
+<b>
+
+<div class="th">
+<p class="blink">Scientific Calculator <br>Developed by <br> HEMANTH N</p>
+</div>
+</b>
+    </body>
+</html>
